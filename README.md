@@ -1,1 +1,83 @@
-# PINGJOE
+# PINGJOE Documentation
+
+[PINGJOE](https://www.pingjoe.com) is a passive monitoring service for your backup tasks and other regularly executed jobs.
+
+Syntax
+------
+
+RESTful service URL syntax:
+
+https://{USER}:{PASSWORD}@api.pingjoe.com[/{SPOTTER}/{ACTION}][?{QUERY}]
+
+
+{USER}
+
+	The API user name defined in your account. It is different
+	than your own account's login e-mail.
+
+{PASSWORD}
+
+	The API user password defined in your account. See {API_USER}
+	for more info.
+
+{SPOTTER}
+
+	Any name of your choosing. Generally, any name that you can
+	use as a file name will do. Example: "my-backup-2",
+	"log-rotating" etc.
+
+{ACTION}
+
+	Specifies spotter actions. Accepts keywords "delete" to delete
+	the spotter, "list" to list all spotters, "history" to see
+	ping history, or {TIME} for regular ping that informs the
+	spotter of the next expected ping time.
+
+{TIME}
+
+	Ping the spotter and notify PINGJOE that the next ping must
+	happen within given {TIME}. The time can be a UNIX timestamp
+	(integer) or {RELATIVE_TIME}.
+
+{RELATIVE_TIME}
+
+	A sequence of {NUMBER} + {UNIT} pairs. Examples: "1w2d",
+	"1d12h30m"
+
+{UNIT}
+
+	supported time units are "m" - minutes, "h" - hours, "d" -
+	days, "M" - months, "Y" or "y" for years
+
+{QUERY}
+
+	Following query parameters are supported:
+	"format=json|text|help" and "logout" to log out from a
+	browser.
+
+
+Examples
+--------
+
+First ping to non-existing spotter will create a spotter. Here we
+create a new spotter named "my-cron-job" that will expect the next
+ping to happen within 1 week and 2 days.
+
+       https://user:my_password@api.pingjoe.com/my-cron-job/1w2d
+
+Ping the already existing "my-cron-job" spotter and set the next ping
+time window to 1 hour and 10 minutes.
+
+       https://user:my_password@api.pingjoe.com/my-cron-job/1h10m
+
+Show "my-cron-job" spotter ping history.
+
+       https://user:my_password@api.pingjoe.com/my-cron-job/history
+
+List all the spotters of the API user "user".
+
+       https://user:my_password@api.pingjoe.com
+
+Disable & remove the "my-cron-job" spotter.
+
+       https://user:my_password@api.pingjoe.com/my-cron-job/delete
