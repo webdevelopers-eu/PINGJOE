@@ -1,5 +1,6 @@
 # PINGJOE Documentation
-[www.pingjoe.com](https://www.pingjoe.com)
+
+[![PINGJOE Passive Monitoring](pingjoe-logo.png?raw=true "PINGJOE Passive Monitoring")](https://www.pingjoe.com)
 
 [PINGJOE](https://www.pingjoe.com) is a passive monitoring service for your backup tasks and other regularly executed jobs.
 
