@@ -3,7 +3,7 @@
 
 [PINGJOE](https://www.pingjoe.com) is a passive monitoring service for your backup tasks and other regularly executed jobs.
 
-It does not probe your servers but rather waits for your program to PING JOE. You will receive an e-mail whenever your app misses the ping. The ping is merely a GET HTTP request to specific URL. 
+It does not probe your servers but rather waits for your program to PING JOE. You will receive an e-mail whenever your app misses the ping. The ping is merely a GET HTTP request to a special URL. 
 
 A few practical examples of how to [PINGJOE](https://www.pingjoe.com)
 
