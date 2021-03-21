@@ -2,6 +2,35 @@
 
 [PINGJOE](https://www.pingjoe.com) is a passive monitoring service for your backup tasks and other regularly executed jobs.
 
+It does not probe your servers but rather waits for your program to PING JOE. You will receive an e-mail whenever your app misses the ping. The ping is merely a GET HTTP request to specific URL. 
+
+A few practical examples of how to PINGJOE
+
+**Shell script**
+```shell
+rsync --archive production:/data/ /prod-backup/ && \
+	curl https://user:123@api.pingjoe.com/nas-data/1d6h
+```
+Translation: Hey "nas-data" spotter! All is OK. Expect the next ping in 1 day and 6 hours.
+
+**Cron**
+```cron
+ 5 0 * * * /cloud/backup && /usr/bin/curl https://user:123@api.pingjoe.com/cloud/1d90m
+```
+Translation: Hey "cloud" spotter! All is OK. Expect the next ping in 1 day and 90 minutes.
+
+**Guess**
+```shell
+ wget -q -O- https://user:123@api.pingjoe.com/some-job/1M
+```
+Translation: Hey "some-job" spotter! Expect the next ping in 1 month.
+
+**PHP**
+```php
+ file_get_contents("https://user:123@api.pingjoe.com/orders-upload/1h10m");
+```
+You get the idea.
+
 Syntax
 ------
 
