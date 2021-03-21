@@ -6,6 +6,10 @@
 
 It does not probe your servers but rather waits for your program to PING JOE. You will receive an e-mail whenever your app misses the ping. The ping is merely a GET HTTP request to a special URL. 
 
+**Q**: I have a reliable backup tool with error reporting already. Why do I need PINGJOE?
+
+**A**: PINGJOE is the best solution to cover problems like your backup tool failing to run or crashing, network or backup server being down, and more. PINGJOE awaits an OK result from your program. If it does not arrive, and there can be thousands of reasons for that, we will notify you. This solution is more reliable than trying to identify and report single problems. And last but not least the service is located on an independent network shielded from any local issues you might have.
+
 ![](./pingjoe-warning.png) 
 
 A few practical examples of how to [PINGJOE](https://www.pingjoe.com) (get your own API credentials [here](https://www.pingjoe.com))
