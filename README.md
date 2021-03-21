@@ -8,7 +8,7 @@ It does not probe your servers but rather waits for your program to PING JOE. Yo
 
 **Q**: I have a reliable backup tool with error reporting already. Why do I need PINGJOE?
 
-**A**: PINGJOE is the best solution to cover problems like your backup tool failing to run or crashing, network or backup server being down, and more. PINGJOE awaits an OK result from your program. If it does not arrive, and there can be thousands of reasons for that, we will notify you. This solution is more reliable than trying to identify and report single problems. And last but not least the service is located on an independent network shielded from any local issues you might have.
+**A**: PINGJOE is the best solution to cover problems like your backup tool crashing or failing to even run, network or backup server being down, and more. PINGJOE awaits an OK result from your program. If it does not arrive, and there can be thousands of reasons for that, we will notify you. This solution is more reliable than trying to identify and report single problems. And last but not least the service is located on an independent network shielded from any local issues you might have.
 
 ![](./pingjoe-warning.png) 
 
