@@ -4,11 +4,13 @@
 
 [PINGJOE](https://www.pingjoe.com) is a passive monitoring service for your backup tasks and other regularly executed jobs.
 
-It does not probe your servers but rather waits for your program to PING JOE. You will receive an e-mail whenever your app misses the ping. The ping is merely a GET HTTP request to a special URL. 
+The service is completely administration-free. Say goodbye to navigating through cluttered web administration filled with ads just to set up your monitoring tasks. Simply implement it in your script, and upon the first ping, we automatically create the task for you. Creating monitoring tasks is as simple as sending that initial ping. It just works, so you can focus on what matters without any worries.
+
+It does not probe your servers but rather waits for your program to **PING**JOE. You will receive an e-mail whenever your app misses the ping. The ping is merely a GET HTTP request to a special external URL at https://api.pingjoe.com . 
 
 > **Q**: I have a reliable backup tool with error reporting already. Why do I need PINGJOE?
 > 
-> **A**: PINGJOE is the best solution to cover scenarios like your backup tool failing or not running at all, whole range of network issues, backup server down, cron daemon issues, and more. PINGJOE awaits an OK result from your program. If it does not arrive, and there can be thousands of reasons for that, we will notify you. This solution is more robust and reliable than trying to identify separate problems. And last but not least the service is located on an independent network shielded from any local issues you might have.
+> **A**: PINGJOE provides comprehensive coverage for scenarios such as backup tool failures, non-execution of tasks, network issues, backup server downtime, cron daemon problems, and more. PINGJOE expects an OK result from your program. If it does not receive the expected response, we will notify you. This approach ensures a robust and reliable monitoring solution, surpassing the limitations of identifying individual problems. Moreover, our service is located on an independent network, shielding it from any local issues you may encounter.
 
 ![](./pingjoe-warning.png) 
 
